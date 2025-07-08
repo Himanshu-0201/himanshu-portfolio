@@ -31,8 +31,8 @@ const Skills = () => (
           {/* Skill Items - 3 per row on larger screens */}
           <Tilt
             key={category.title}
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
+            tiltMaxAngleX={3}
+            tiltMaxAngleY={3}
             perspective={1000}
             scale={1.05}
             transitionSpeed={1000}

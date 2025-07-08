@@ -330,7 +330,7 @@ export const socialMediaLinks = {
 export const personalInfo = {
   fname : "Himanshu",
   lname : "Nagar",
-  description : "I am a full-stack developer with over 2 years of experience in building scalable web applications. Skilled in both front-end andback-end development, I specialize in the MERN stack and other modern technologies to create seamless user experiences and efficient solutions."
+  description : "I'm Himanshu Nagar, a full-stack developer with a focus on React, Node.js, and automation testing using Selenium. I enjoy building clean, user-friendly web apps and continuously learning new technologies to grow as a developer."
 }
 
 

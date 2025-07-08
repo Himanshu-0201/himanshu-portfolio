@@ -21,7 +21,7 @@ const About = () => {
             {`${personalInfo.fname} ${personalInfo.lname}`}
           </h2>
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
+          {/* <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
             <span className="text-white">I am a </span>
             <ReactTypingEffect
               text={[
@@ -38,7 +38,7 @@ const About = () => {
                 <span className="text-[#8245ec]">{cursor}</span>
               )}
             />
-          </h3>
+          </h3> */}
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
            {personalInfo.description}
@@ -54,7 +54,7 @@ const About = () => {
               boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
             }}
           >
-            DOWNLOAD CV
+            View CV
           </a>
           
         </div>
@@ -62,8 +62,8 @@ const About = () => {
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <Tilt
             className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
+            tiltMaxAngleX={3}
+            tiltMaxAngleY={3}
             perspective={1000}
             scale={1.05}
             transitionSpeed={1000}

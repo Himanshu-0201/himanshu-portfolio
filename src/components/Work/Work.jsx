@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import useOutSideClick from "../../hooks/useOutClick";
 import { projects } from "../../constants";
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const projectRef = useRef(null);
+
+
+  useOutSideClick(projectRef, () => {
+    setSelectedProject(null);
+  });
 
   const handleOpenModal = (project) => {
     setSelectedProject(project);
@@ -67,7 +74,9 @@ const Work = () => {
       {/* Modal Container */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4 overflow-y-auto">
-          <div className="bg-gray-900 rounded-xl shadow-2xl w-[90%] max-w-3xl my-10 overflow-y-auto max-h-[calc(100vh-5rem)] relative">
+          <div
+            ref={projectRef}
+            className="bg-gray-900 rounded-xl shadow-2xl w-[90%] max-w-3xl my-10 overflow-y-auto max-h-[calc(100vh-5rem)] relative">
             <div className="flex justify-end p-4">
               <button
                 onClick={handleCloseModal}
