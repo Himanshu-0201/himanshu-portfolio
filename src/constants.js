@@ -54,6 +54,7 @@ import sjcLogo from './assets/education_logo/cbse.jpg';
 import heyThereLogo from './assets/work_logo/heyThere.png';
 import googleCalendarAnalyticsLogo from './assets/work_logo/google_calendar_analytics_logo.png';
 import weatherLogo from './assets/work_logo/weather.png';
+import foodOrderApp from "./assets/work_logo/foodOrderApp.png";
 import tttLogo from './assets/work_logo/ttt.png';
 import fileShareLogo from './assets/work_logo/fileShare.png';
 import csprepLogo from './assets/work_logo/cs_prep.png';
@@ -226,16 +227,16 @@ export const projects = [
     github: "https://github.com/Himanshu-0201/calendar-analysis",
     webapp: "https://google-calendar-analysis.vercel.app/",
   },
-  // {
-  //   id: 1,
-  //   title: "Weather Forecast Website",
-  //   description:
-  //     "A sleek and responsive React.js application built to deliver real-time and extended weather forecasts with precision. Users can search by city or use their current location to instantly access detailed weather data, including temperature, humidity, wind speed, and a 5-day forecast. Powered by the OpenWeatherMap API and styled with Tailwind CSS, the app offers a clean and modern user interface, enhanced with Axios for data fetching and React Toastify for smooth user notifications—making it an essential tool for weather insights on the go.",
-  //   image: weatherLogo,
-  //   tags: ["HTML", "CSS", "JavaScript", "React JS", "API","GitHub Pages"],
-  //   github: "https://github.com/amannagar04/Weather-App",
-  //   webapp: "https://amannagar04.github.io/Weather-App/",
-  // },
+  {
+    id: 1,
+    title: "Food Order App",
+    description:
+      "A front end well designed website, which is able to add meal food in cart dyanamically , we can increase amount of the meal and decrease the amount of meal from the cart",
+    image: foodOrderApp,
+    tags: ["HTML", "CSS", "JavaScript", "React JS", "Redux","GitHub"],
+    github: "https://github.com/Himanshu-0201/FoodOrderApp",
+    webapp: "https://github.com/Himanshu-0201/FoodOrderApp",
+  },
   // {
   //   id: 2,
   //   title: "Tic-Tac-Toe Game",
