@@ -5,10 +5,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
-  const [isSent, setIsSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+
+    const toastId = toast.loading("Sending your message...")
 
     emailjs
       .sendForm(
@@ -19,24 +21,30 @@ const Contact = () => {
       )
       .then(
         () => {
-          setIsSent(true);
           form.current.reset(); // Reset form fields after sending
-          toast.success("Message sent successfully! ✅", {
+
+          toast.update(toastId, {
+            render: "Message sent successfully! ✅",
             position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
+            type: "success",
+            isLoading: false,
+            autoClose: 1500,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             theme: "dark",
           });
+
         },
         (error) => {
           console.error("Error sending message:", error);
-          toast.error("Failed to send message. Please try again.", {
+
+          toast.update(toastId, {
+            render: "Failed to send message. Please try again. ❌",
             position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
+            type: "error",
+            isLoading: false,
+            autoClose: 1500,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
